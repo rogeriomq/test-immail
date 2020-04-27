@@ -3,10 +3,10 @@ import GameController from './controllers/GamesController'
 
 const routes = Router()
 
-routes.get('/games', GameController.index)
-
 routes.get('/', (request, response) => {
-  return response.send('PQP')
+  return response.redirect('/games')
 })
+
+routes.get('/games', GameController.index)
 
 export default routes
