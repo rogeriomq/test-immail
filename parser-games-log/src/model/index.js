@@ -3,7 +3,7 @@ const db = require('./db')
 const Schema = db.Schema
 
 const GamesSchema = new Schema({
-  _id: String,
+  name: String,
   total_kills: Number,
   players: [String],
   kills: Object,

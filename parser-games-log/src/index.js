@@ -26,7 +26,7 @@ const saveInDatabase = (gamesObject) => {
     const games = new Games()
     const game = bypass.get()[key]
     
-    games._id = key
+    games.name = key
     games.total_kills = game.total_kills || 0
     games.players = game.players || []
     games.kills = game.kills || {}
@@ -45,5 +45,6 @@ readingLine
   })
   .on('close', async () => {    
     await saveInDatabase(bypass.get())
-    console.log('End of save collection in mogodb')
+    console.log('⏎ End of save collection in mogodb.')
+    console.log('❌Press CTRL + C to exit script!')
   })
