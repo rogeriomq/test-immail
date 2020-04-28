@@ -51,7 +51,7 @@ A URL de conexção pode ser diferente de acordo seu serviço de dados MongoDB;
 - Execute `yarn dev` ou `npm run dev` para iniciar o webservice;
 - Execute `yarn test` ou `npm run test` para rodar os testes;
 
-
+[![MVjtLaT4UdI](api.png)](https://youtu.be/MVjtLaT4UdI)
 
 ## frontend
 
@@ -60,3 +60,4 @@ A URL de conexção pode ser diferente de acordo seu serviço de dados MongoDB;
 - Execute `yarn start ou `npm start` para executar o frontend em modo de desenvolvimento;
 - Execute `yarn build` ou `npm run build` para criar o build da aplicação;
 
+[![kuE0jaEAOOg](front.png)](https://youtu.be/kuE0jaEAOOg)
