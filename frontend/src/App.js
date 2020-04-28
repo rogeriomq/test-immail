@@ -6,8 +6,9 @@ import gamesAPI from './services/gamesAPI';
 
 function App() { 
   const [games, setGames] = useState([])
-  const [rankingView, setRankingView] = useState(true)
+  const [rankingView, setRankingView] = useState(false)
 
+  // Get games in api and sort by "game name" xD
   useEffect(()=> {
     const fetchGames = async() => {
       const orderByName = (a, b) => {
@@ -27,8 +28,8 @@ function App() {
   return (
     <div className="relative">
       
-      <header className="w-full bg-blue-800 text-white font-extrabold text-2xl text-center py-3 md:text-4xl">
-        <div className="flex items-center justify-center w-full">
+      <header className="w-full bg-blue-800 text-white font-extrabold text-2xl py-3 md:text-4xl">
+        <div className="flex items-center justify-center w-full md:justify-start md:pl-4">
           <img src={quakeiii} alt="Guake Arena III" className="w-20 rounded-full"/>
           <span className="mx-3"> Quake Log Games</span>
         </div>

@@ -3,15 +3,16 @@ import React, { useEffect, useState } from 'react';
 export default function Ranking({games}) {
   const [ranking, setRanking] = useState([])
   
-  // transform in array of players with name and kills
+  // get all players and count respective kills
   useEffect(()=>{
     const temp = {}
     for(let game of games) {
-      Object.keys(game.kills || [])
-        .map((player) => {
-          temp[player] = (temp[player] || 0) + game.kills[player]
-          return ''
-        })
+      console.log(game.players)
+      for(let player of game.players) {
+        console.log(player)
+        let hasKills = game.kills && game.kills[player]
+        temp[player] = (temp[player] || 0) + (hasKills || 0)
+      }
     }
 
     let players = Object.keys(temp)
