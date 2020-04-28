@@ -7,9 +7,7 @@ export default function Ranking({games}) {
   useEffect(()=>{
     const temp = {}
     for(let game of games) {
-      console.log(game.players)
       for(let player of game.players) {
-        console.log(player)
         let hasKills = game.kills && game.kills[player]
         temp[player] = (temp[player] || 0) + (hasKills || 0)
       }
